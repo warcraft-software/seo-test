@@ -11,6 +11,7 @@ const appHistory = useRouterHistory(createHistory)({
 
 // Components
 import Header from './components/header.jsx';
+import Home from './views/home.jsx';
 
 class App extends React.Component {
 	render() {
@@ -25,9 +26,10 @@ class App extends React.Component {
 	}
 }
 
-ReactDOM.render(<Router history={appHistory}>
+ReactDOM.render(
+  <Router history={appHistory}>
 		<Route component={App}>
-			<Route path="/"  component={Header} />
+			<Route path="/"  component={Home} />
 		</Route>
 	</Router>,
 	document.getElementById('page')

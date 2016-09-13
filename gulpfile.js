@@ -66,6 +66,8 @@ gulp.task('server', function() {
 ************************************************/
 gulp.task('watch', function() {
 	gulp.watch(['./app/components/*.jsx'], ['build']);
+	gulp.watch(['./app/flux/**/*.js'], ['build']);
+	gulp.watch(['./app/views/*.jsx'], ['build']);
 	gulp.watch(['./app/app.jsx'], ['build']);
 	gulp.watch(['./app/sass/*.scss'], ['sass']);
 });
