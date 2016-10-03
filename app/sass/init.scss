@@ -10,6 +10,28 @@
 	text-decoration: none;
 }
 
+.carrousel {
+  width: 300px;
+  float: left;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 140px;
+  margin: 5px;
+}
+
+.carrousel.i-0{
+	background-color: #cccccc;
+}
+
+.carrousel.i-1{
+	background-color: aqua;
+}
+
+.carrousel.i-2{
+	background-color: yellow;
+}
+
 /************************************************
 ********* variables
 ************************************************/

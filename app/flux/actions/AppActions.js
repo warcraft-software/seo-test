@@ -7,10 +7,9 @@ let AppActions = {
     -------- Example for actions --------
   */
 
-  exampleAction:(number) => {
+  exampleAction:() => {
     AppDispatcher.dispatch({
-      actionType: System.EXAMPLE_CONSTANT,
-      number: number
+      actionType: System.EXAMPLE_CONSTANT
     });
   }
 };

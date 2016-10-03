@@ -3,6 +3,9 @@ import System  from '../constants/System.js';
 import {EventEmitter} from 'events';
 import assign         from 'object-assign';
 
+
+import $         from 'jquery';
+
 let CHANGE_EVENT = 'change';
 
 /*
@@ -10,12 +13,21 @@ let CHANGE_EVENT = 'change';
 */
 
 let _exampleStore = {
-  number: ''
+  data: []
 };
 
 /* METHODS */
-  let exampleStoreMethod = (theNumber) => {
-    _exampleStore.number = theNumber;
+  let exampleStoreMethod = () => {
+    $.getJSON('/webcontrols/hlgetproductsbyline.ashx?linea=carrusel-home-1', function(data){
+      _exampleStore.data.push(data);
+      $.getJSON('/webcontrols/hlgetproductsbyline.ashx?linea=carrusel-home-2', function(data){
+        _exampleStore.data.push(data);
+        $.getJSON('/webcontrols/hlgetproductsbyline.ashx?linea=carrusel-home-3', function(data){
+          _exampleStore.data.push(data);
+          AppStore.emitChange();
+        });
+      });
+    });
   };
 
   
@@ -60,8 +72,7 @@ AppDispatcher.register(function(action) {
       -------- Example for actions Calls --------
     */
       case System.EXAMPLE_CONSTANT:
-        exampleStoreMethod(action.number);
-        AppStore.emitChange();
+        exampleStoreMethod();
       break;
     default:
       // no op

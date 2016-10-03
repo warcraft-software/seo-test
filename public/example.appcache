@@ -1,0 +1,14 @@
+{
+  "name": "My Extension",
+  "version": "1.0",
+  "description": "Opens up a local webpage",
+  "icons": { "128": "icon_128.png" },
+  "background_page": "bg.html",
+  "browser_action": {
+    "default_title": "",
+    "default_icon": "icon_19.png"
+  },
+  "permissions": [
+    "tabs"
+  ]
+}

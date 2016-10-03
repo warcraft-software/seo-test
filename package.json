@@ -22,6 +22,8 @@
     "react-router": "^2.8.0"
   },
   "devDependencies": {
+    "body-parser": "^1.15.0",
+    "underscore": "^1.8.3",
     "babelify": "^7.3.0",
     "browserify": "^13.1.0",
     "gulp": "^3.9.1",
@@ -31,7 +33,9 @@
     "gulp-sass": "^2.3.2",
     "gulp-streamify": "^1.0.2",
     "gulp-uglify": "^2.0.0",
-    "vinyl-source-stream": "^1.1.0"
+    "vinyl-source-stream": "^1.1.0",
+    "method-override": "^2.3.5",
+    "request": "^2.69.0"
   },
   "author": "Oscar Cardenas",
   "license": "MIT"
